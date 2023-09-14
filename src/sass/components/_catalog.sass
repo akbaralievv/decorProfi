@@ -1,0 +1,83 @@
+.catalog
+    padding-top: 100px
+    @media (max-width:768px)
+        padding-top: 60px
+    @media (max-width:360px)
+        padding-top: 100px
+
+    h2
+        margin-bottom: 80px
+        @media (max-width:768px)
+            margin-bottom: 26px
+        @media (max-width:360px)
+            margin-bottom: 20px
+    .cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 36px
+        @media (max-width:768px)
+            gap: 20px
+        .card
+            width: 580px
+            height: 280px
+            background-size: cover
+            background-repeat: no-repeat
+            border-radius: 25px
+            padding: 50px 40px
+            display: flex
+            align-items: end
+            cursor: pointer
+            @media (max-width:768px)
+                width: 304px
+                height: 147px
+                padding: 25px 20px
+            @media (max-width:360px)
+                width: 328px
+                height: 156px
+            &:hover
+                transform: scale(1.03)
+                transition: .4s
+            &-inner
+                display: flex
+                justify-content: space-between
+                align-items: center
+                width: 100%
+                h3
+                    color: #FFF
+                    font-family: "Gotham Pro",sans-serif
+                    font-size: 32px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 26px
+                    @media (max-width:768px)
+                        font-size: 20px
+                        line-height: 13.628px
+                    @media (max-width:360px)
+                        font-size: 16px
+                        line-height: 14.703px
+                img
+                    @media (max-width:768px)
+                        width: 15px
+
+        .duble-card
+            width: 580px
+            height: 280px
+            display: flex
+            justify-content: space-between
+            @media (max-width:768px)
+                width: 304px
+                height: 147px
+            @media (max-width:360px)
+                width: 328px
+                height: 156px
+            .card
+                width: 271px
+                height: 280px
+                padding: 28px 24px
+                @media (max-width:768px)
+                    width: 142px
+                    height: 100%
+                @media (max-width:360px)
+                    width: 158px
+                    padding: 15px 14px
