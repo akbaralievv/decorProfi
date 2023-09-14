@@ -1,6 +1,7 @@
 import { useContext, useRef, useState } from 'react';
 
 import search from '../assets/icons/search.svg';
+import close from '../assets/icons/closeIcon.png';
 import telegram from '../assets/icons/telegram.svg';
 import instagram from '../assets/icons/instagram.svg';
 import burger from '../assets/icons/burger-menu.svg';
@@ -17,6 +18,8 @@ function Header() {
   const [isAdvantagesActive, setIsAdvantagesActive] = useState(false);
   const [isContactsActive, setIsContactsActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+  const [searchActive, setSeacrhActive] = useState(false);
+  const [disabled, setDisabled] = useState('');
 
   const scrollToCatalog = (e) => {
     e.preventDefault();
@@ -69,8 +72,6 @@ function Header() {
     setSearchValue(e.target.value);
   };
 
-  console.log(menuActive);
-
   return (
     <header className={`header`}>
       <div className="container">
@@ -81,11 +82,14 @@ function Header() {
               Profi
             </h2>
           </div>
-          <form className="search" onSubmit={handleSubmit}>
+          <form
+            className="search"
+            style={{ display: `${searchActive ? 'block' : 'none'}` }}
+            onSubmit={handleSubmit}>
             <img src={search} alt="search" onClick={handleSubmit} />
             <input type="text" placeholder="Поиск" onChange={handleChange} value={searchValue} />
           </form>
-          <nav className="nav">
+          <nav className="nav" style={{ display: `${!searchActive ? 'block' : 'none'}` }}>
             <ul>
               <li>
                 <a href="">О нас</a>
@@ -111,6 +115,12 @@ function Header() {
             </ul>
           </nav>
           <div className="social">
+            <img
+              src={searchActive ? close : search}
+              alt="search"
+              className="searchIcon"
+              onClick={() => setSeacrhActive(!searchActive)}
+            />
             <img src={telegram} alt="telegram" />
             <img src={instagram} alt="instagram" />
           </div>
@@ -119,7 +129,7 @@ function Header() {
           </div>
           {menuActive && (
             <div className="menu-options">
-              <nav className="nav">
+              <nav className="nav navOptions">
                 <ul>
                   <li>
                     <a href="">О нас</a>

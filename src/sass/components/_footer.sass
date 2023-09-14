@@ -2,7 +2,7 @@
     padding-bottom: 60px
     @media (max-width: 768px)
         padding-bottom: 50px
-    @media (max-width: 360px)
+    @media (max-width: 450px)
         padding-bottom: 42px
     .inner
         ul
@@ -17,7 +17,7 @@
         .content
             display: flex
             justify-content: space-between
-            @media (max-width: 360px)
+            @media (max-width: 450px)
                 flex-direction: column
                 gap: 20px
         .links
@@ -33,10 +33,13 @@
                 font-style: normal
                 font-weight: 400
                 line-height: 48px
+                @media (max-width: 950px)
+                    font-size: 18px
+                    line-height: 35px
                 @media (max-width: 768px)
                     font-size: 12px
                     line-height: 25.267px
-                @media (max-width: 360px)
+                @media (max-width: 450px)
                     font-size: 16px
             h3
                 color: #FFF
@@ -45,18 +48,20 @@
                 font-style: normal
                 font-weight: 600
                 line-height: 48px
+                @media (max-width: 950px)
+                    font-size: 16px
                 @media (max-width: 768px)
                     font-size: 12px
                     line-height: 25.267px
-                @media (max-width: 360px)
+                @media (max-width: 450px)
                     font-size: 20px
                     line-height: 48px
             h3:last-child
-                @media (max-width: 360px)
+                @media (max-width: 450px)
                     font-size: 15px
         .maps
             width: 40%
-            @media (max-width: 360px)
+            @media (max-width: 450px)
                 width: 100%
             img
                 width: 100%

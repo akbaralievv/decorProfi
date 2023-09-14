@@ -12,19 +12,45 @@
             margin-bottom: 66px
             @media (max-width: 768px)
                 margin-bottom: 26px
+            @media (max-width: 520px) and (min-width: 361px)
+                text-align: center
             @media (max-width: 360px)
                 margin-bottom: 22px
         .cards
             display: flex
             justify-content: space-between
-            align-items: center
+            height: 666px
+            width: 100%
+            @media (max-width: 1130px)
+                height: 500px
+            @media (max-width: 920px)
+                height: 420px
+            @media (max-width: 870px)
+                height: 400px
+            @media (max-width: 768px)
+                justify-content: space-around
+                height: 372px
+            @media (max-width:575px) and (min-width: 521px)
+                height: 360px
             .title
                 display: flex
                 flex-direction: column
-                gap: 28px
+                justify-content: space-between
                 width: 701px
+                @media (max-width: 1200px)
+                    width: 500px
+                @media (max-width: 1000px)
+                    width: 420px
+                @media (max-width: 870px)
+                    width: 390px
                 @media (max-width: 768px)
                     width: 385px
+                    gap: 20px
+                @media (max-width: 660px)
+                    width: 320px
+                @media (max-width:575px) and (min-width: 521px)
+                    width: 260px
+                    gap: 10px
                 @media (max-width: 360px)
                     width: 100%
                     gap: 28px
@@ -33,12 +59,23 @@
                     background: linear-gradient(180deg, #FBFBFB -698.33%, #DDD -588.76%, #1E1E1E 100%)
                     height: 330px
                     padding: 56px 49px
+                    @media (max-width: 1200px)
+                        padding: 35px 35px
+                    @media (max-width: 1130px)
+                        height: 245px
+                    @media (max-width: 920px)
+                        height: 200px
+                        border-radius: 25px
                     @media (max-width: 768px)
                         padding: 22px 26px 30px
                         height: 182px
+                        border-radius: 14.057px
+                    @media (max-width:575px) and (min-width: 521px)
+                        padding: 20px 20px 15px
                     @media (max-width: 360px)
                         padding: 20px 20px
                         height: 155px
+                        border-radius: 14.057px
                     h3
                         color: #FFF
                         font-family: "Gotham Pro",sans-serif
@@ -48,9 +85,18 @@
                         margin-bottom: 24px
                         margin-left: 2px
                         line-height: 40px
+                        @media (max-width: 1200px)
+                            font-size: 30px
+                            line-height: 30px
+                        @media (max-width: 920px)
+                            font-size: 26px
+                            line-height: 28px
                         @media (max-width: 768px)
                             font-size: 22px
                             line-height: 26px
+                        @media (max-width:575px) and (min-width: 521px)
+                            font-size: 20px
+                            line-height: 20px
                         @media (max-width: 360px)
                             font-size: 20px
                             margin-bottom: 8px
@@ -63,11 +109,21 @@
                         line-height: 36.5px
                         letter-spacing: 0.24px
                         width: 482px
+                        @media (max-width: 1200px)
+                            width: 350px
+                            font-size: 18px
+                            line-height: 30px
+                        @media (max-width: 920px)
+                            font-size: 15px
+                            line-height: 25px
+                            width: 320px
                         @media (max-width: 768px)
                             width: 239px
                             font-size: 12px
                             line-height: 20px
                             letter-spacing: 0.12px
+                        @media (max-width:575px) and (min-width: 521px)
+                            width: 200px
                         @media (max-width: 360px)
                             width: 239px
                             font-size: 12px
@@ -80,14 +136,36 @@
                         border-radius: 30px
                         padding: 48px 24px
                         background: linear-gradient(180deg, #FBFBFB -698.33%, #DDD -588.76%, #1E1E1E 100%)
+                        @media (max-width: 1200px)
+                            width: 230px
+                            height: 260px
+                            padding: 35px 19px
+                        @media (max-width: 1130px)
+                            height: 220px
+                        @media (max-width: 1000px)
+                            width: 195px
+                            border-radius: 25px
+                        @media (max-width: 920px)
+                            height: 200px
+                        @media (max-width: 870px)
+                            width: 188px
+                            height: 180px
+                            border-radius: 20px
                         @media (max-width: 768px)
                             width: 184.835px
-                            height: 169.982px
+                            height: 150.982px
                             padding: 26px 14px 60px
+                            border-radius: 14.057px
+                        @media (max-width: 660px)
+                            width: 150px
+                        @media (max-width:575px) and (min-width: 521px)
+                            width: 125px
+                            border-radius: 20px
                         @media (max-width: 360px)
                             height: 145px
                             width: 157px
                             padding: 20px 12px
+                            border-radius: 14.057px
                         h3
                             color: #FFF
                             font-family: "Gotham Pro",sans-serif
@@ -97,10 +175,18 @@
                             margin-bottom: 56px
                             margin-left: 24px
                             line-height: 26px
+                            @media (max-width: 1200px)
+                                font-size: 30px
+                                margin-bottom: 40px
+                            @media (max-width: 920px)
+                                font-size: 26px
                             @media (max-width: 768px)
                                 font-size: 22.004px
                                 margin-bottom: 24px
                                 margin-left: 12px
+                            @media (max-width:575px) and (min-width: 521px)
+                                font-size: 18px
+                                line-height: 18px
                             @media (max-width: 360px)
                                 font-size: 20.825px
                                 line-height: 22.147px
@@ -115,11 +201,29 @@
                             line-height: 36.5px
                             letter-spacing: 0.24px
                             width: 288px
+                            @media (max-width: 1200px)
+                                width: 190px
+                                font-size: 17px
+                                line-height: 38px
+                            @media (max-width: 920px)
+                                width: 160px
+                                font-size: 14px
+                                line-height: 25px
+                            @media (max-width: 870px)
+                                width: 159px
+                                font-size: 13px
+                                line-height: 23px
                             @media (max-width: 768px)
                                 width: 158px
                                 font-size: 12px
                                 line-height: 20.079px
                                 letter-spacing: 0.12px
+                            @media (max-width: 660px)
+                                width: 120px
+                                font-size: 11px
+                            @media (max-width:575px) and (min-width: 521px)
+                                width: 100px
+                                font-size: 10px
                             @media (max-width: 360px)
                                 width: 129px
                                 font-size: 12px
@@ -129,10 +233,19 @@
                         background: #E7772E
             .images
                 width: 475px
-                height: 666px
+                height: 100%
+                @media (max-width: 1130px)
+                    width: 350px
+                @media (max-width: 920px)
+                    width: 300px
+                @media (max-width: 870px)
+                    width: 230px
                 @media (max-width: 768px)
                     width: 223px
-                    height: 372px
+                @media (max-width: 600px)
+                    width: 205px
+                @media (max-width: 520px)
+                    display: none
                 @media (max-width: 360px)
                     display: none
                 img
