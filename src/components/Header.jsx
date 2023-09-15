@@ -9,7 +9,7 @@ import burger from '../assets/icons/burger-menu.svg';
 import { ScrollToContext } from '../App';
 
 function Header() {
-  const { catalogRef, advantagesRef, contactsRef, setTextCatalog, textCatalog } =
+  const { catalogRef, advantagesRef, contactsRef, setTextCatalog, textCatalog, aboutRef } =
     useContext(ScrollToContext);
 
   const [searchValue, setSearchValue] = useState('');
@@ -17,6 +17,7 @@ function Header() {
   const [isCatalogActive, setIsCatalogActive] = useState(false);
   const [isAdvantagesActive, setIsAdvantagesActive] = useState(false);
   const [isContactsActive, setIsContactsActive] = useState(false);
+  const [isAboutActive, setIsAboutActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [searchActive, setSeacrhActive] = useState(false);
   const [disabled, setDisabled] = useState('');
@@ -26,6 +27,7 @@ function Header() {
     setIsCatalogActive(true);
     setIsAdvantagesActive(false);
     setIsContactsActive(false);
+    setIsAboutActive(false);
     if (catalogRef.current) {
       catalogRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -39,6 +41,7 @@ function Header() {
     setIsCatalogActive(false);
     setIsAdvantagesActive(true);
     setIsContactsActive(false);
+    setIsAboutActive(false);
     if (advantagesRef.current) {
       advantagesRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -52,8 +55,23 @@ function Header() {
     setIsCatalogActive(false);
     setIsAdvantagesActive(false);
     setIsContactsActive(true);
+    setIsAboutActive(false);
     if (contactsRef.current) {
       contactsRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    setIsCatalogActive(false);
+    setIsAdvantagesActive(false);
+    setIsContactsActive(false);
+    setIsAboutActive(true);
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
@@ -92,7 +110,9 @@ function Header() {
           <nav className="nav" style={{ display: `${!searchActive ? 'block' : 'none'}` }}>
             <ul>
               <li>
-                <a href="">О нас</a>
+                <a href="" onClick={scrollToAbout} className={isAboutActive ? 'active' : ''}>
+                  О нас
+                </a>
               </li>
               <li>
                 <a href="" onClick={scrollToCatalog} className={isCatalogActive ? 'active' : ''}>
@@ -132,7 +152,9 @@ function Header() {
               <nav className="nav navOptions">
                 <ul>
                   <li>
-                    <a href="">О нас</a>
+                    <a href="" onClick={scrollToAbout} className={isAboutActive ? 'active' : ''}>
+                      О нас
+                    </a>
                   </li>
                   <li>
                     <a

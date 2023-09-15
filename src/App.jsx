@@ -1,10 +1,6 @@
 import './css/app.css';
 import Header from './components/Header';
-import '../src/fonts/Gotham Pro/gothampro.ttf';
-import '../src/fonts/Gotham Pro/gothampro_black.ttf';
-import '../src/fonts/Gotham Pro/gothampro_bold.ttf';
-import '../src/fonts/Gotham Pro/gothampro_light.ttf';
-import '../src/fonts/Gotham Pro/gothampro_medium.ttf';
+
 import Home from './components/Home';
 import Catalog from './components/Catalog';
 import Advantages from './components/Advantages';
@@ -13,6 +9,7 @@ import Footer from './components/Footer';
 import ModalInfo from './components/ModalInfo';
 import products from './products.json';
 import { createContext, useState, useRef } from 'react';
+import About from './components/About';
 
 export const ModalContext = createContext('');
 export const ScrollToContext = createContext('');
@@ -22,6 +19,7 @@ function App() {
   const catalogRef = useRef(null);
   const advantagesRef = useRef(null);
   const contactsRef = useRef(null);
+  const aboutRef = useRef(null);
 
   const tableTopsRef = useRef(null);
   const [textCatalog, setTextCatalog] = useState('');
@@ -30,6 +28,7 @@ function App() {
     <main>
       <ScrollToContext.Provider
         value={{
+          aboutRef,
           catalogRef,
           advantagesRef,
           contactsRef,
@@ -47,6 +46,7 @@ function App() {
           ))}
           <ModalInfo />
         </ModalContext.Provider>
+        <About />
         <Footer />
       </ScrollToContext.Provider>
     </main>
