@@ -39,6 +39,7 @@ function App() {
           setTextCatalog,
           textCatalog,
           catalogs,
+          catalogV2,
         }}>
         <Header />
         <Home />

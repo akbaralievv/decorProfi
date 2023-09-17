@@ -14,7 +14,7 @@ import { ScrollToContext } from '../App';
 import a from '../assets/images/tableTops/tableTops.png';
 
 function Catalog() {
-  const { catalogRef, tableTopsRef, setTextCatalog, textCatalog, catalogs } =
+  const { catalogRef, tableTopsRef, setTextCatalog, textCatalog, catalogV2 } =
     useContext(ScrollToContext);
 
   const scrollToTableTops = (e) => {
@@ -34,19 +34,19 @@ function Catalog() {
       setTextCatalog('');
     }
   }, [textCatalog]);
-
+  console.log(catalogV2);
   return (
     <section className="catalog" ref={catalogRef}>
       <div className="container">
         <div className="inner">
           <h2>Каталог</h2>
           <div className="cards">
-            {catalogs.map((catalog, id) => (
+            {catalogV2.map((catalog, id) => (
               <div
                 key={id}
                 className="card"
                 style={{
-                  backgroundImage: `url(${catalog.img})`,
+                  backgroundImage: `url(${tableTops})`,
                 }}
                 onClick={scrollToTableTops}>
                 <div className="card-inner">

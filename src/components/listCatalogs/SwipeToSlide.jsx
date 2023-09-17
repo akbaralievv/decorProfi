@@ -66,7 +66,7 @@ function SwipeToSlide({ catalogs }) {
           <div className="card" key={id}>
             <div className="content" onClick={() => handleClick(item)}>
               <div className="img">
-                <img src={item.img} alt="catalogTableTops" />
+                <img src={catalogTableTops} alt="catalogTableTops" />
               </div>
               <h4>{item.name}</h4>
               <p>{item.price} Сум</p>
