@@ -31,7 +31,7 @@ const App = () => {
         <div className="inner">
           <div className="images">
             <div className="general-img">
-              <img src={dataInfo.img} alt="img" />
+              <img src={general} alt="img" />
             </div>
             <div className="small-img">
               <img src={small} alt="img" />

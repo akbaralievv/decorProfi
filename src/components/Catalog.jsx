@@ -18,13 +18,12 @@ function Catalog() {
     useContext(ScrollToContext);
 
   const scrollToTableTops = (e) => {
-    e.preventDefault();
-    if (e.target.querySelector('h3')) {
-      const cardTitle = e.target.querySelector('h3').textContent;
-      setTextCatalog(cardTitle);
-    }
+    e && setTextCatalog(e);
+    // if (e.target.querySelector('h3')) {
+    //   const cardTitle = e.target.querySelector('h3').textContent;
+    //   setTextCatalog(cardTitle);
+    // }
   };
-
   useEffect(() => {
     if (tableTopsRef.current) {
       tableTopsRef.current.scrollIntoView({
@@ -34,7 +33,6 @@ function Catalog() {
       setTextCatalog('');
     }
   }, [textCatalog]);
-  console.log(catalogV2);
   return (
     <section className="catalog" ref={catalogRef}>
       <div className="container">
@@ -48,7 +46,7 @@ function Catalog() {
                 style={{
                   backgroundImage: `url(${tableTops})`,
                 }}
-                onClick={scrollToTableTops}>
+                onClick={() => scrollToTableTops(catalog.name)}>
                 <div className="card-inner">
                   <h3>{catalog.name}</h3>
                   <img src={arrow} alt="arrow" />
