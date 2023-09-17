@@ -31,7 +31,7 @@ function Header() {
     if (catalogRef.current) {
       catalogRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'end',
       });
     }
   };

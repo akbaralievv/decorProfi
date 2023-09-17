@@ -1,48 +1,5 @@
-// import React from 'react';
-
 import general from '../assets/images/modalImg.png';
 import small from '../assets/images/smallModalImg.png';
-
-// function ModalInfo() {
-//   return (
-//     <div className="container">
-//       <div className="modal">
-{
-  /* <div className="inner">
-  <div className="images">
-    <div className="general-img">
-      <img src={general} alt="img" />
-    </div>
-    <div className="small-img">
-      <img src={small} alt="img" />
-    </div>
-  </div>
-  <div className="title">
-    <h3>Навес для шкафа СH04</h3>
-    <ul>
-      <li>Цвет изделия - GR - Серый</li>
-      <li>Количество в упаковке - 100</li>
-      <li>Вес упоковки - 12.57 кг</li>
-      <li>Объем упаковки - 0.23171 м.куб.</li>
-    </ul>
-    <div className="description">
-      <h4>Описание</h4>
-      <p>
-        СН04 - классический крепёжный элемент для верхних баз мебели. Навес выдерживает нагрузку на
-        пару до 80 кг и допускает возможность регулировки по вертикали +7 мм и по горизонтали от
-        плоскости стены +20 мм
-      </p>
-    </div>
-    <a href="">Связаться</a>
-  </div>
-</div>; */
-}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ModalInfo;
 
 import React, { useState, useContext, useEffect } from 'react';
 import { Button, Modal } from 'antd';
@@ -74,7 +31,7 @@ const App = () => {
         <div className="inner">
           <div className="images">
             <div className="general-img">
-              <img src={general} alt="img" />
+              <img src={dataInfo.img} alt="img" />
             </div>
             <div className="small-img">
               <img src={small} alt="img" />

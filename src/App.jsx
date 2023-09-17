@@ -10,6 +10,8 @@ import ModalInfo from './components/ModalInfo';
 import products from './products.json';
 import { createContext, useState, useRef } from 'react';
 import About from './components/About';
+import catalogs from './catalogs.json';
+import catalogV2 from './catalogV2.json';
 
 export const ModalContext = createContext('');
 export const ScrollToContext = createContext('');
@@ -20,6 +22,7 @@ function App() {
   const advantagesRef = useRef(null);
   const contactsRef = useRef(null);
   const aboutRef = useRef(null);
+  const [modalData, setModalData] = useState({});
 
   const tableTopsRef = useRef(null);
   const [textCatalog, setTextCatalog] = useState('');
@@ -35,15 +38,33 @@ function App() {
           tableTopsRef,
           setTextCatalog,
           textCatalog,
+          catalogs,
         }}>
         <Header />
         <Home />
         <Catalog />
         <Advantages />
-        <ModalContext.Provider value={{ isModalOpen, setIsModalOpen, setProductInfo, productInfo }}>
-          {products.types.map((item, id) => (
-            <ListCatalogs types={item} key={id} />
-          ))}
+        <ModalContext.Provider
+          value={{
+            isModalOpen,
+            setIsModalOpen,
+            setProductInfo,
+            productInfo,
+            setModalData,
+            modalData,
+          }}>
+          {catalogV2?.map((catalog, catalogId) => {
+            if (catalog.subcatalogs) {
+              return catalog.subcatalogs.map((subcatalog, typeId) => (
+                <ListCatalogs
+                  types={subcatalog}
+                  key={typeId}
+                  catalogName={catalog}
+                  shouldScroll={typeId === 0}
+                />
+              ));
+            }
+          })}
           <ModalInfo />
         </ModalContext.Provider>
         <About />

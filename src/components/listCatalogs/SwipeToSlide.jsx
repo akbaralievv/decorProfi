@@ -62,11 +62,11 @@ function SwipeToSlide({ catalogs }) {
   return (
     <div className="wrapper-slider">
       <Slider {...settings}>
-        {catalogs.products.map((item, id) => (
+        {catalogs.map((item, id) => (
           <div className="card" key={id}>
             <div className="content" onClick={() => handleClick(item)}>
               <div className="img">
-                <img src={catalogTableTops} alt="catalogTableTops" />
+                <img src={item.img} alt="catalogTableTops" />
               </div>
               <h4>{item.name}</h4>
               <p>{item.price} Сум</p>

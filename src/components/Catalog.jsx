@@ -6,15 +6,23 @@ import baskets from '../assets/images/baskets.png';
 import loops from '../assets/images/loops.png';
 import arrow from '../assets/icons/arrow-card.svg';
 import handles from '../assets/images/handles.png';
+import faceFurniture from '../assets/images/faceFurniture.png';
+import functionFurniture from '../assets/images/functionFurniture.png';
+import mdf from '../assets/images/mdf.png';
+import ldsp from '../assets/images/ldsp.png';
 import { ScrollToContext } from '../App';
+import a from '../assets/images/tableTops/tableTops.png';
 
 function Catalog() {
-  const { catalogRef, tableTopsRef, setTextCatalog, textCatalog } = useContext(ScrollToContext);
+  const { catalogRef, tableTopsRef, setTextCatalog, textCatalog, catalogs } =
+    useContext(ScrollToContext);
 
   const scrollToTableTops = (e) => {
     e.preventDefault();
-    const cardTitle = e.target.querySelector('h3').textContent;
-    setTextCatalog(cardTitle);
+    if (e.target.querySelector('h3')) {
+      const cardTitle = e.target.querySelector('h3').textContent;
+      setTextCatalog(cardTitle);
+    }
   };
 
   useEffect(() => {
@@ -33,63 +41,20 @@ function Catalog() {
         <div className="inner">
           <h2>Каталог</h2>
           <div className="cards">
-            <div
-              className="card"
-              style={{
-                backgroundImage: `url(${tableTops})`,
-              }}
-              onClick={scrollToTableTops}>
-              <div className="card-inner">
-                <h3>Столешницы</h3>
-                <img src={arrow} alt="arrow" />
-              </div>
-            </div>
-            <div
-              className="card"
-              style={{
-                backgroundImage: `url(${washings})`,
-              }}
-              onClick={scrollToTableTops}>
-              <div className="card-inner">
-                <h3>Мойки</h3>
-                <img src={arrow} alt="arrow" />
-              </div>
-            </div>
-            <div
-              className="card"
-              style={{
-                backgroundImage: `url(${baskets})`,
-              }}
-              onClick={scrollToTableTops}>
-              <div className="card-inner">
-                <h3>Корзины</h3>
-                <img src={arrow} alt="arrow" />
-              </div>
-            </div>
-            <div className="duble-card">
+            {catalogs.map((catalog, id) => (
               <div
+                key={id}
                 className="card"
                 style={{
-                  backgroundImage: `url(${handles})`,
+                  backgroundImage: `url(${catalog.img})`,
                 }}
                 onClick={scrollToTableTops}>
                 <div className="card-inner">
-                  <h3>Ручки</h3>
+                  <h3>{catalog.name}</h3>
                   <img src={arrow} alt="arrow" />
                 </div>
               </div>
-              <div
-                className="card"
-                style={{
-                  backgroundImage: `url(${loops})`,
-                }}
-                onClick={scrollToTableTops}>
-                <div className="card-inner">
-                  <h3>Петель</h3>
-                  <img src={arrow} alt="arrow" />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
