@@ -1,7 +1,7 @@
 [
     {
         "name":"Столешницы",
-        "img":"assets/images/tableTops/tableTops.png",
+        "img":"assets/tableTops.png",
         "subcatalogs":[
                     {
                         "name":"Столешницы",
@@ -13,7 +13,7 @@
                                 "model":"1NA2",
                                 "color":"grown",
                                 "size":"12x12",
-                                "img":"assets/images/tableTops/table.png",
+                                "img":"assets/images/tableTops/table.png?import",
                                 "description":"Главное преимущество модели P701 - ее невидимость. Все крепежные элементы спрятаны от глаз. Для авторов современных интерьеров, предпачитающих воздушность, невесомость, лаконичность.Предусмотрена регулировка в трех плоскостях - для быстрого и безупречного выравнивания полок."
                             },
                             {
