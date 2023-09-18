@@ -2,13 +2,23 @@ import React, { useContext } from 'react';
 import { ScrollToContext } from '../App';
 
 function Home() {
-  const { catalogRef, advantagesRef, contactsRef, setTextCatalog, textCatalog } =
+  const { catalogRef, advantagesRef, contactsRef, setTextCatalog, textCatalog, aboutRef } =
     useContext(ScrollToContext);
 
   const scrollToCatalog = (e) => {
     e.preventDefault();
     if (catalogRef.current) {
       catalogRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
@@ -29,8 +39,8 @@ function Home() {
               <a href="" className="orange" onClick={scrollToCatalog}>
                 Каталог
               </a>
-              <a href="" className="transparent">
-                Подробнее
+              <a href="" className="transparent" onClick={scrollToAbout}>
+                О нас
               </a>
             </div>
           </div>

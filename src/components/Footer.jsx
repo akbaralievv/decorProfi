@@ -36,7 +36,7 @@ function Footer() {
                   <p>Email:</p>
                   <ul>
                     <li>
-                      <a href="">
+                      <a href="mailto:decor_profi@mail.rudecor_profi@mail.ru" target="_blank">
                         <h3>decor_profi@mail.rudecor_profi@mail.ru</h3>
                       </a>
                     </li>
@@ -45,7 +45,7 @@ function Footer() {
               </ul>
             </div>
             <div className="maps">
-              <a href="">
+              <a href="https://2gis.kg/bishkek/geo/70000001019350893" target="_blank">
                 <img src={maps} alt="maps" />
               </a>
             </div>

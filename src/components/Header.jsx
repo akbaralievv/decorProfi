@@ -141,8 +141,12 @@ function Header() {
               className="searchIcon"
               onClick={() => setSeacrhActive(!searchActive)}
             />
-            <img src={telegram} alt="telegram" />
-            <img src={instagram} alt="instagram" />
+            <a href="https://t.me/decorprofiuz" target="_blank">
+              <img src={telegram} alt="telegram" />
+            </a>
+            <a href="https://instagram.com/decorprofi.kg?igshid=MzRlODBiNWFlZA==" target="_blank">
+              <img src={instagram} alt="instagram" />
+            </a>
           </div>
           <div className="burger-menu" onClick={() => setMenuActive(!menuActive)}>
             <img src={burger} alt="burger" />

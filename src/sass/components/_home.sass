@@ -120,8 +120,15 @@
                 a:last-child
                     background: transparent
                     border: 1px solid #E7772E
+                    @media (max-width: 768px)
+                        border: 0.5px solid #E7772E
+                    @media (max-width: 470px)
+                        border: 0.2px solid #E7772E
                     &:active
-                        border: 1px solid #B66028
+                        @media (max-width: 768px)
+                            border: 0.5px solid #B66028
+                        @media (max-width: 470px)
+                            border: 0.2px solid #B66028
         .numbers
             margin-top: 124px
             display: flex

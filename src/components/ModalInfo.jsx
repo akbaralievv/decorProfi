@@ -51,7 +51,7 @@ const App = () => {
               <h4>Описание</h4>
               <p>{dataInfo.description}</p>
             </div>
-            <a href="" onClick={(e) => e.preventDefault()}>
+            <a href="https://t.me/+998901114700" target="_blank">
               Связаться
             </a>
           </div>

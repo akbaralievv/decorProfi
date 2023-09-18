@@ -26,13 +26,13 @@
 }
 
 body {
-  background: #161616;
+  background: #FFF;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -170,10 +170,14 @@ h2 {
 @media (max-width: 600px) {
   .header .inner .search {
     display: none;
+    width: 230px;
+    height: 27px;
   }
 }
 @media (max-width: 470px) {
   .header .inner .search {
+    width: 160px;
+    height: 25px;
     display: block !important;
   }
 }
@@ -295,6 +299,16 @@ h2 {
     top: 25%;
     height: 11px;
     left: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .header .inner .search img {
+    top: 27%;
+  }
+}
+@media (max-width: 470px) {
+  .header .inner .search img {
+    top: 25%;
   }
 }
 @media (max-width: 470px) {
@@ -660,8 +674,25 @@ h2 {
   background: transparent;
   border: 1px solid #E7772E;
 }
-.home .inner .title .buttons a:last-child:active {
-  border: 1px solid #B66028;
+@media (max-width: 768px) {
+  .home .inner .title .buttons a:last-child {
+    border: 0.5px solid #E7772E;
+  }
+}
+@media (max-width: 470px) {
+  .home .inner .title .buttons a:last-child {
+    border: 0.2px solid #E7772E;
+  }
+}
+@media (max-width: 768px) {
+  .home .inner .title .buttons a:last-child:active {
+    border: 0.5px solid #B66028;
+  }
+}
+@media (max-width: 470px) {
+  .home .inner .title .buttons a:last-child:active {
+    border: 0.2px solid #B66028;
+  }
 }
 .home .inner .numbers {
   margin-top: 124px;
@@ -1623,7 +1654,7 @@ h2 {
   color: #E7772E;
 }
 .list-catalogs .inner h3 {
-  color: #BEBEBE;
+  color: #323232;
   font-family: "Gotham Pro", sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -1701,12 +1732,12 @@ h2 {
     width: 584px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 645px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
     width: 500px;
   }
 }
-@media (max-width: 555px) {
+@media (max-width: 565px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
     width: 450px;
   }
@@ -1742,29 +1773,23 @@ h2 {
     height: 35px;
   }
 }
-@media (max-width: 768px) {
-  .list-catalogs .inner .wrapper-slider .slick-next {
-    width: 16px;
-    height: 16px;
-  }
-}
 @media (max-width: 630px) {
   .list-catalogs .inner .wrapper-slider .slick-next {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     right: 10px;
   }
 }
 @media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .slick-next {
-    width: 16px;
-    height: 16px;
+    width: 25px;
+    height: 25px;
   }
 }
 @media (max-width: 470px) {
   .list-catalogs .inner .wrapper-slider .slick-next {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
   }
 }
 .list-catalogs .inner .wrapper-slider .slick-next svg {
@@ -1873,7 +1898,7 @@ h2 {
   transition: 0.4s;
 }
 .list-catalogs .inner .wrapper-slider .card .content h4 {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 28px;
   font-style: normal;
@@ -1915,7 +1940,7 @@ h2 {
   }
 }
 .list-catalogs .inner .wrapper-slider .card .content p {
-  color: #BEBEBE;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 28px;
   font-style: normal;
@@ -2146,7 +2171,7 @@ h2 {
           justify-content: space-between;
 }
 .footer .inner .links p {
-  color: #FFF;
+  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -2171,7 +2196,7 @@ h2 {
   }
 }
 .footer .inner .links h3 {
-  color: #FFF;
+  color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -2248,7 +2273,7 @@ h2 {
   padding: 52px 75px;
   border-radius: 56px;
   border: 1px solid #E7772E;
-  background: #161616;
+  background: #fff;
   width: 1165px;
   height: 730px;
 }
@@ -2266,7 +2291,6 @@ h2 {
     height: 382px;
     border-radius: 29.307px;
     border: 0.523px solid #E7772E;
-    background: #161616;
     padding: 27px 40px;
   }
 }
@@ -2465,7 +2489,7 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .title h3 {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 36px;
   font-style: normal;
@@ -2527,7 +2551,7 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .title ul li {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -2578,7 +2602,7 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .title .description h4 {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -2610,7 +2634,7 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .title .description p {
-  color: #BABABA;
+  color: #323232;
   font-family: "Gotham Pro", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -2878,7 +2902,7 @@ h2 {
           justify-content: space-between;
 }
 .about .inner .title .description p {
-  color: #FFF;
+  color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 24px;
   font-style: normal;

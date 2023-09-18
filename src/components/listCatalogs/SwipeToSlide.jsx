@@ -17,21 +17,21 @@ function CustomNextArrow(props) {
         height="72"
         viewBox="0 0 71 72"
         fill="none">
-        <g clipPath="url(#clip0_93_697)">
+        <g clipPath="url(#clip0_238_1294)">
           <path
-            d="M38.0821 3.36918L65.6301 36.1997C66.239 36.9253 66.5347 37.863 66.4521 38.8066C66.3695 39.7502 65.9155 40.6224 65.1899 41.2312L32.3595 68.7792"
-            stroke="white"
+            d="M38.082 3.36869L65.63 36.1992C66.2389 36.9248 66.5345 37.8625 66.452 38.8061C66.3694 39.7497 65.9154 40.6219 65.1898 41.2307L32.3593 68.7788"
+            stroke="black"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </g>
         <defs>
-          <clipPath id="clip0_93_697">
+          <clipPath id="clip0_238_1294">
             <rect
               width="50"
               height="50"
               fill="white"
-              transform="translate(0 32.9928) rotate(-40)"
+              transform="translate(0 32.9923) rotate(-40)"
             />
           </clipPath>
         </defs>
@@ -71,7 +71,9 @@ function SwipeToSlide({ catalogs }) {
               <h4>{item.name}</h4>
               <p>{item.price} Сум</p>
             </div>
-            <a href="">Связаться</a>
+            <a href="https://t.me/+998901114700" target="_blank">
+              Связаться
+            </a>
           </div>
         ))}
       </Slider>
