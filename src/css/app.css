@@ -472,6 +472,10 @@ h2 {
   font-size: 12px;
   line-height: 18.84px;
 }
+.header .inner .menu-options .nav ul .active {
+  border-bottom: 1px solid #E7772E;
+  padding-bottom: 3px;
+}
 @media (max-width: 470px) {
   .header .inner .nav.navOptions {
     display: block !important;
@@ -1217,12 +1221,12 @@ h2 {
   .advantages .inner .cards {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: 372px;
+    height: 363px;
   }
 }
 @media (max-width: 575px) and (min-width: 521px) {
   .advantages .inner .cards {
-    height: 340px;
+    height: 323px;
   }
 }
 .advantages .inner .cards .title {
@@ -1255,7 +1259,7 @@ h2 {
 }
 @media (max-width: 790px) {
   .advantages .inner .cards .title {
-    width: 385px;
+    width: 350px;
     gap: 20px;
   }
 }
@@ -1273,7 +1277,10 @@ h2 {
 @media (max-width: 470px) {
   .advantages .inner .cards .title {
     max-width: 328px;
-    gap: 28px;
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .advantages .inner .cards .title .card {
@@ -1303,12 +1310,13 @@ h2 {
   .advantages .inner .cards .title .card {
     padding: 22px 26px 30px;
     height: 182px;
-    border-radius: 25.057px;
+    border-radius: 20.057px;
   }
 }
 @media (max-width: 575px) and (min-width: 521px) {
   .advantages .inner .cards .title .card {
     padding: 20px 20px 15px;
+    border-radius: 17px;
   }
 }
 @media (max-width: 470px) {
@@ -1440,13 +1448,13 @@ h2 {
 @media (max-width: 920px) {
   .advantages .inner .cards .title .small-cards .card-small {
     padding: 30px 19px;
+    border-radius: 20px;
   }
 }
 @media (max-width: 870px) {
   .advantages .inner .cards .title .small-cards .card-small {
     width: 180px;
     height: 180px;
-    border-radius: 24px;
   }
 }
 @media (max-width: 790px) {
@@ -1454,7 +1462,11 @@ h2 {
     width: 170.835px;
     height: 160.982px;
     padding: 26px 14px 60px;
-    border-radius: 25.057px;
+  }
+}
+@media (max-width: 660px) {
+  .advantages .inner .cards .title .small-cards .card-small {
+    height: 155px;
   }
 }
 @media (max-width: 660px) {
@@ -1465,7 +1477,7 @@ h2 {
 @media (max-width: 575px) and (min-width: 521px) {
   .advantages .inner .cards .title .small-cards .card-small {
     width: 125px;
-    height: 150px;
+    height: 135px;
     border-radius: 17px;
   }
 }
@@ -1870,15 +1882,24 @@ h2 {
 .list-catalogs .inner .wrapper-slider .card .content .img {
   width: 100%;
   overflow: hidden;
-  border-radius: 17.41px;
+  border-radius: 30.41px;
 }
-@media (max-width: 450px) {
+@media (max-width: 1060px) {
   .list-catalogs .inner .wrapper-slider .card .content .img {
-    border-radius: 15px;
-    border-radius: 12.41px;
+    border-radius: 25.41px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 860px) {
+  .list-catalogs .inner .wrapper-slider .card .content .img {
+    border-radius: 17px;
+  }
+}
+@media (max-width: 565px) {
+  .list-catalogs .inner .wrapper-slider .card .content .img {
+    border-radius: 14px;
+  }
+}
+@media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .card .content .img {
     border-radius: 10px;
   }
@@ -2963,5 +2984,10 @@ h2 {
 @media (max-width: 790px) {
   .about .inner .title .description hr {
     border: 1px solid #717171;
+  }
+}
+@media (max-width: 470px) {
+  .about .inner .title .description hr {
+    border: 0.8px solid #717171;
   }
 }
