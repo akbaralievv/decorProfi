@@ -2302,6 +2302,9 @@ h2 {
     font-size: 15px;
   }
 }
+.footer .inner .links .time {
+  font-weight: 500;
+}
 .footer .inner .maps {
   width: 40%;
 }

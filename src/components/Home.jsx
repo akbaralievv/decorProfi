@@ -46,7 +46,7 @@ function Home() {
           </div>
           <div className="numbers">
             <div className="card">
-              <h3>6</h3>
+              <h3>16</h3>
               <p>Лет опыта</p>
             </div>
             <div className="card">
