@@ -769,6 +769,7 @@ h2 {
   .home .inner .numbers .card h3 {
     font-size: 21.702px;
     line-height: 23.372px;
+    color: #000;
   }
 }
 .home .inner .numbers .card p {
@@ -778,19 +779,26 @@ h2 {
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  font-size: 12px;
-  line-height: 15.75px;
+}
+@media (max-width: 900px) {
+  .home .inner .numbers .card p {
+    font-size: 18px;
+  }
 }
 @media (max-width: 768px) {
   .home .inner .numbers .card p {
-    font-size: 12px;
-    line-height: 15.75px;
+    font-size: 10.467px;
+  }
+}
+@media (max-width: 415px) {
+  .home .inner .numbers .card p {
+    font-size: 10px;
   }
 }
 @media (max-width: 470px) {
   .home .inner .numbers .card p {
-    font-size: 10.016px;
-    line-height: 13.146px;
+    font-size: 10px;
+    color: #323232;
   }
 }
 
@@ -1818,6 +1826,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0;
   gap: 62px;
 }
 @media (max-width: 950px) {
@@ -1928,10 +1937,28 @@ h2 {
   margin-bottom: 14px;
   line-height: 48px;
 }
+@media (max-width: 1200px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 1060px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
 @media (max-width: 950px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
     font-size: 22px;
     line-height: 35px;
+  }
+}
+@media (max-width: 860px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1960,6 +1987,12 @@ h2 {
     line-height: 14.082px;
   }
 }
+@media (max-width: 450px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 10px;
+    line-height: 12.082px;
+  }
+}
 .list-catalogs .inner .wrapper-slider .card .content p {
   color: #000;
   font-family: "Gotham Pro", sans-serif;
@@ -1968,10 +2001,28 @@ h2 {
   font-weight: 400;
   line-height: 48px;
 }
+@media (max-width: 1200px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 1060px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
 @media (max-width: 950px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
     font-size: 22px;
     line-height: 35px;
+  }
+}
+@media (max-width: 860px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1996,6 +2047,11 @@ h2 {
   .list-catalogs .inner .wrapper-slider .card .content p {
     font-size: 12px;
     line-height: 14.082px;
+  }
+}
+@media (max-width: 450px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 10px;
   }
 }
 .list-catalogs .inner .wrapper-slider .card a {
@@ -2213,7 +2269,7 @@ h2 {
 }
 @media (max-width: 450px) {
   .footer .inner .links p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .footer .inner .links h3 {
@@ -2296,7 +2352,19 @@ h2 {
   border: 1px solid #E7772E;
   background: #fff;
   width: 1165px;
-  height: 730px;
+  height: auto;
+}
+@media (max-width: 996px) {
+  .ant-modal .ant-modal-content {
+    padding: 27px 40px;
+  }
+}
+@media (max-width: 910px) {
+  .ant-modal .ant-modal-content {
+    width: 628px;
+    border-radius: 29.307px;
+    border: 0.523px solid #E7772E;
+  }
 }
 @media (max-width: 900px) {
   .ant-modal .ant-modal-content {
@@ -2306,19 +2374,9 @@ h2 {
     padding: 30px 30px;
   }
 }
-@media (max-width: 910px) {
-  .ant-modal .ant-modal-content {
-    width: 628px;
-    height: 382px;
-    border-radius: 29.307px;
-    border: 0.523px solid #E7772E;
-    padding: 27px 40px;
-  }
-}
 @media (max-width: 660px) {
   .ant-modal .ant-modal-content {
     width: 500px;
-    height: 300px;
     border-radius: 29.307px;
     padding: 24px 20px;
   }
@@ -2326,7 +2384,6 @@ h2 {
 @media (max-width: 660px) {
   .ant-modal .ant-modal-content {
     width: 328px;
-    height: 505px;
     border-radius: 29.307px;
     border: 0.523px solid #E7772E;
     padding: 20px 16px;
@@ -2437,6 +2494,7 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .images .general-img img {
+  border-radius: 28px;
   width: 100%;
   height: 100%;
 }
@@ -2463,6 +2521,7 @@ h2 {
 .ant-modal .ant-modal-content .images .small-img img {
   width: 200px;
   height: 130px;
+  border-radius: 20px;
 }
 @media (max-width: 910px) {
   .ant-modal .ant-modal-content .images .small-img img {
@@ -2477,39 +2536,14 @@ h2 {
   }
 }
 .ant-modal .ant-modal-content .title {
-  width: 364px;
-}
-@media (max-width: 1150px) {
-  .ant-modal .ant-modal-content .title {
-    width: 300px;
-  }
-}
-@media (max-width: 1035px) {
-  .ant-modal .ant-modal-content .title {
-    width: 250px;
-  }
-}
-@media (max-width: 935px) {
-  .ant-modal .ant-modal-content .title {
-    width: 220px;
-  }
-}
-@media (max-width: 900px) {
-  .ant-modal .ant-modal-content .title {
-    width: 210px;
-  }
-}
-@media (max-width: 910px) {
-  .ant-modal .ant-modal-content .title {
-    width: 200px;
-  }
+  width: 40%;
 }
 @media (max-width: 660px) {
   .ant-modal .ant-modal-content .title {
     width: 100%;
   }
 }
-.ant-modal .ant-modal-content .title h3 {
+.ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
   color: #000;
   font-family: "Gotham Pro", sans-serif;
   font-size: 36px;
@@ -2519,32 +2553,32 @@ h2 {
   margin-bottom: 4px;
 }
 @media (max-width: 1150px) {
-  .ant-modal .ant-modal-content .title h3 {
+  .ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
     font-size: 30px;
     line-height: 40px;
   }
 }
 @media (max-width: 935px) {
-  .ant-modal .ant-modal-content .title h3 {
+  .ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
     font-size: 25px;
     line-height: 30px;
   }
 }
 @media (max-width: 900px) {
-  .ant-modal .ant-modal-content .title h3 {
+  .ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
     font-size: 22px;
     line-height: 27px;
   }
 }
 @media (max-width: 910px) {
-  .ant-modal .ant-modal-content .title h3 {
+  .ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
     font-size: 20px;
     line-height: 25.12px;
     margin-bottom: 1.23px;
   }
 }
 @media (max-width: 660px) {
-  .ant-modal .ant-modal-content .title h3 {
+  .ant-modal .ant-modal-content .title h3, .ant-modal .ant-modal-content .title h4, .ant-modal .ant-modal-content .title h5 {
     font-size: 16px;
     line-height: 25.12px;
     margin-bottom: 8px;
@@ -2609,6 +2643,14 @@ h2 {
     line-height: 20.933px;
   }
 }
+.ant-modal .ant-modal-content .title .information {
+  height: auto;
+  max-height: 175px;
+  overflow-y: auto;
+}
+.ant-modal .ant-modal-content .title .information::-webkit-scrollbar {
+  width: 0;
+}
 .ant-modal .ant-modal-content .title .description {
   margin-bottom: 32px;
 }
@@ -2622,34 +2664,42 @@ h2 {
     margin-bottom: 32px;
   }
 }
-.ant-modal .ant-modal-content .title .description h4 {
+.ant-modal .ant-modal-content .title .description .desc-text {
+  height: auto;
+  max-height: 168px;
+  overflow-y: auto;
+}
+.ant-modal .ant-modal-content .title .description .desc-text::-webkit-scrollbar {
+  width: 0;
+}
+.ant-modal .ant-modal-content .title .description h6 {
   color: #000;
   font-family: "Gotham Pro", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
 }
 @media (max-width: 1150px) {
-  .ant-modal .ant-modal-content .title .description h4 {
+  .ant-modal .ant-modal-content .title .description h6 {
     font-size: 16px;
     line-height: 30px;
   }
 }
 @media (max-width: 900px) {
-  .ant-modal .ant-modal-content .title .description h4 {
+  .ant-modal .ant-modal-content .title .description h6 {
     font-size: 15px;
     line-height: 27px;
   }
 }
 @media (max-width: 910px) {
-  .ant-modal .ant-modal-content .title .description h4 {
+  .ant-modal .ant-modal-content .title .description h6 {
     font-size: 10.467px;
     line-height: 20.933px;
   }
 }
 @media (max-width: 660px) {
-  .ant-modal .ant-modal-content .title .description h4 {
+  .ant-modal .ant-modal-content .title .description h6 {
     font-size: 12px;
     line-height: 20.933px;
   }
@@ -2657,7 +2707,7 @@ h2 {
 .ant-modal .ant-modal-content .title .description p {
   color: #323232;
   font-family: "Gotham Pro", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
@@ -2683,7 +2733,31 @@ h2 {
     line-height: 14px;
   }
 }
-.ant-modal .ant-modal-content .title a {
+.ant-modal .ant-modal-content .title .modalInfo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ant-modal .ant-modal-content .title .modalInfo-footer p {
+  color: #000;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media (max-width: 935px) {
+  .ant-modal .ant-modal-content .title .modalInfo-footer p {
+    font-size: 14px;
+  }
+}
+.ant-modal .ant-modal-content .title .modalInfo-footer a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2708,7 +2782,7 @@ h2 {
   line-height: 14.852px;
 }
 @media (max-width: 1150px) {
-  .ant-modal .ant-modal-content .title a {
+  .ant-modal .ant-modal-content .title .modalInfo-footer a {
     width: 150.433px;
     height: 35.167px;
     padding: 8px;
@@ -2719,7 +2793,7 @@ h2 {
   }
 }
 @media (max-width: 910px) {
-  .ant-modal .ant-modal-content .title a {
+  .ant-modal .ant-modal-content .title .modalInfo-footer a {
     width: 99.433px;
     height: 26.167px;
     padding: 4px;
@@ -2728,6 +2802,9 @@ h2 {
     font-size: 12px;
     line-height: 10px;
   }
+}
+.ant-modal .ant-modal-content .title .modalInfo-footer a:active {
+  background: #B66028;
 }
 
 .about {

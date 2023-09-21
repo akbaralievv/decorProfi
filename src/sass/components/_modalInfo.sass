@@ -19,26 +19,26 @@
         border: 1px solid #E7772E
         background: #fff
         width: 1165px
-        height: 730px
+        height: auto
+        @media (max-width: 996px)
+            padding: 27px 40px
+        @media (max-width: 910px)
+            width: 628px
+            border-radius: 29.307px
+            border: 0.523px solid #E7772E
         @media (max-width: 900px)
             font-size: 22px
             line-height: 27px
             border-radius: 30.307px
             padding: 30px 30px
-        @media (max-width: 910px)
-            width: 628px
-            height: 382px
-            border-radius: 29.307px
-            border: 0.523px solid #E7772E
-            padding: 27px 40px
         @media (max-width: 660px)
             width: 500px
-            height: 300px
+            // height: 300px
             border-radius: 29.307px
             padding: 24px 20px
         @media (max-width: 660px)
             width: 328px
-            height: 505px
+            // height: 505px
             border-radius: 29.307px
             border: 0.523px solid #E7772E
             padding: 20px 16px
@@ -88,6 +88,7 @@
                 @media (max-width: 660px)
                     height: 148px
                 img
+                    border-radius: 28px
                     width: 100%
                     height: 100%
             .small-img
@@ -101,6 +102,7 @@
                 img
                     width: 200px
                     height: 130px
+                    border-radius: 20px
                     @media (max-width: 910px)
                         width: 104px
                         height: 68px
@@ -108,20 +110,10 @@
                         width: 79px
                         height: 68px
         .title
-            width: 364px
-            @media (max-width:1150px)
-                width: 300px
-            @media (max-width: 1035px)
-                width: 250px
-            @media (max-width: 935px)
-                width: 220px
-            @media (max-width: 900px)
-                width: 210px
-            @media (max-width: 910px)
-                width: 200px
+            width: 40%
             @media (max-width: 660px)
                 width: 100%
-            h3
+            h3,h4,h5
                 color: #000
                 font-family: "Gotham Pro",sans-serif
                 font-size: 36px
@@ -177,16 +169,28 @@
                     @media (max-width: 660px)
                         font-size: 12px
                         line-height: 20.933px
+            .information
+                height: auto
+                max-height: 175px
+                overflow-y: auto
+                &::-webkit-scrollbar
+                    width: 0
             .description
                 margin-bottom: 32px
                 @media (max-width: 910px)
                     margin-bottom: 14px
                 @media (max-width: 660px)
                     margin-bottom: 32px
-                h4
+                .desc-text
+                    height: auto
+                    max-height: 168px
+                    overflow-y: auto
+                    &::-webkit-scrollbar
+                        width: 0
+                h6
                     color: #000
                     font-family: "Gotham Pro",sans-serif
-                    font-size: 20px
+                    font-size: 22px
                     font-style: normal
                     font-weight: 400
                     line-height: 40px
@@ -205,7 +209,7 @@
                 p
                     color: #323232
                     font-family: "Gotham Pro",sans-serif
-                    font-size: 16px
+                    font-size: 20px
                     font-style: normal
                     font-weight: 400
                     line-height: 22px
@@ -221,36 +225,51 @@
                         width: 100%
                         font-size: 12px
                         line-height: 14px
-            a
-                display: inline-flex
-                text-decoration: none
-                border-radius: 27px
-                background: #E7772E
-                width: 190px
-                height: 50px
-                padding: 10px
-                justify-content: center
+            .modalInfo-footer
+                display: flex
+                justify-content: space-between
                 align-items: center
-                color: #FFF
-                text-align: center
-                font-family: "Gotham Pro",sans-serif
-                font-size: 20px
-                font-style: normal
-                font-weight: 400
-                line-height: 14.852px
-                @media (max-width:1150px)
-                    width: 150.433px
-                    height: 35.167px
-                    padding: 8px
-                    gap: 5.233px
-                    border-radius: 20.13px
-                    font-size: 16px
-                    line-height: 12px
-                @media (max-width: 910px)
-                    width: 99.433px
-                    height: 26.167px
-                    padding: 4px
-                    gap: 5.233px
-                    border-radius: 14.13px
-                    font-size: 12px
-                    line-height: 10px
+                p
+                    color: #000
+                    font-family: "Gotham Pro",sans-serif
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 40px
+                    @media (max-width: 935px)
+                        font-size: 14px
+                a
+                    display: inline-flex
+                    text-decoration: none
+                    border-radius: 27px
+                    background: #E7772E
+                    width: 190px
+                    height: 50px
+                    padding: 10px
+                    justify-content: center
+                    align-items: center
+                    color: #FFF
+                    text-align: center
+                    font-family: "Gotham Pro",sans-serif
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 14.852px
+                    @media (max-width:1150px)
+                        width: 150.433px
+                        height: 35.167px
+                        padding: 8px
+                        gap: 5.233px
+                        border-radius: 20.13px
+                        font-size: 16px
+                        line-height: 12px
+                    @media (max-width: 910px)
+                        width: 99.433px
+                        height: 26.167px
+                        padding: 4px
+                        gap: 5.233px
+                        border-radius: 14.13px
+                        font-size: 12px
+                        line-height: 10px
+                    &:active
+                        background: #B66028

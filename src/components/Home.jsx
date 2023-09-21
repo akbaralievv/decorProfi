@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
+
 import { ScrollToContext } from '../App';
 
 function Home() {
-  const { catalogRef, advantagesRef, contactsRef, setTextCatalog, textCatalog, aboutRef } =
-    useContext(ScrollToContext);
+  const { catalogRef, aboutRef } = useContext(ScrollToContext);
 
   const scrollToCatalog = (e) => {
     e.preventDefault();

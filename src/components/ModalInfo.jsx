@@ -1,63 +1,63 @@
-import general from '../assets/images/modalImg.png';
-import small from '../assets/images/smallModalImg.png';
-
-import React, { useState, useContext, useEffect } from 'react';
-import { Button, Modal } from 'antd';
+import React, { useContext, useEffect, useState } from 'react';
+import { Modal } from 'antd';
 import { ModalContext } from '../App';
+
 const App = () => {
   const { isModalOpen, setIsModalOpen, productInfo } = useContext(ModalContext);
   const [dataInfo, setDataInfo] = useState({});
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
+
+  useEffect(() => {
+    if (productInfo && productInfo.hasOwnProperty('name')) {
+      setDataInfo(productInfo);
+    } else {
+      setDataInfo({});
+    }
+  }, [productInfo]);
+
   const handleCancel = () => {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    if (productInfo.hasOwnProperty('name')) {
-      setDataInfo(productInfo);
-    }
-    return () => {
-      setDataInfo({});
-    };
-  }, [productInfo]);
   return (
     <>
       <Modal open={isModalOpen} onCancel={handleCancel}>
         <div className="inner">
           <div className="images">
-            <div className="general-img">
-              <img src={general} alt="img" />
-            </div>
-            <div className="small-img">
-              <img src={small} alt="img" />
-            </div>
+            <figure className="general-img">
+              {dataInfo.image1 && <img src={dataInfo.image1} alt="img" />}
+            </figure>
+            <figure className="small-img">
+              {dataInfo.image2 && <img key="image2" src={dataInfo.image2} alt="img" />}
+              {dataInfo.image3 && <img key="image3" src={dataInfo.image3} alt="img" />}
+              {dataInfo.image4 && <img key="image4" src={dataInfo.image4} alt="img" />}
+              {dataInfo.image5 && <img key="image5" src={dataInfo.image5} alt="img" />}
+            </figure>
           </div>
           <div className="title">
-            <h3>
-              {dataInfo.title} {dataInfo.name}
-            </h3>
-            <ul>
-              <li>Цвет изделия - {dataInfo.color}</li>
-              <li>Количество в упаковке - {dataInfo.count}</li>
-              <li>Вес упоковки - {dataInfo.weight} кг</li>
-              <li>Объем упаковки - {dataInfo.volume} м.куб.</li>
-            </ul>
-            <div className="description">
-              <h4>Описание</h4>
-              <p>{dataInfo.description}</p>
+            <h3>{dataInfo.name}</h3>
+            <h4>{dataInfo.articul}</h4>
+            <h5>{dataInfo.model}</h5>
+            <dl>
+              {dataInfo.color && <dt>Цвет изделия - {dataInfo.color}</dt>}
+              <dd className="information">{dataInfo.information}</dd>
+            </dl>
+            {dataInfo.description && (
+              <div className="description">
+                <h6>Описание</h6>
+                <p className="desc-text">{dataInfo.description}</p>
+              </div>
+            )}
+            <div className="modalInfo-footer">
+              <a href="https://t.me/+998901114700" target="_blank" rel="noopener noreferrer">
+                Связаться
+              </a>
+              {dataInfo.price ? <p>{dataInfo.price} сум</p> : <p>Цена не написано</p>}
             </div>
-            <a href="https://t.me/+998901114700" target="_blank">
-              Связаться
-            </a>
           </div>
         </div>
       </Modal>
     </>
   );
 };
+
 export default App;

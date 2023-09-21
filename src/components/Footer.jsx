@@ -45,7 +45,7 @@ function Footer() {
               </ul>
             </div>
             <div className="maps">
-              <a href="https://2gis.kg/bishkek/geo/70000001019350893" target="_blank">
+              <a href="https://2gis.ru/tashkent/geo/70000001061157502" target="_blank">
                 <img src={maps} alt="maps" />
               </a>
             </div>

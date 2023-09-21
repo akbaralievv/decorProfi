@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import catalogTableTops from '../../assets/images/catalog-tableTops.png';
 import { ModalContext } from '../../App';
 
 function CustomNextArrow(props) {
@@ -42,9 +41,10 @@ function CustomNextArrow(props) {
 
 function SwipeToSlide({ catalogs }) {
   const { setIsModalOpen, setProductInfo } = useContext(ModalContext);
+  const isFiniteSlider = catalogs.length >= 3;
   const settings = {
     className: 'center',
-    infinite: true,
+    infinite: isFiniteSlider,
     centerPadding: '60px',
     slidesToShow: 3,
     swipeToSlide: true,
@@ -62,16 +62,20 @@ function SwipeToSlide({ catalogs }) {
   return (
     <div className="wrapper-slider">
       <Slider {...settings}>
-        {catalogs.map((item, id) => (
-          <div className="card" key={id}>
+        {catalogs.map((item) => (
+          <div className="card" key={item.id}>
             <div className="content" onClick={() => handleClick(item)}>
               <div className="img">
-                <img src={catalogTableTops} alt="catalogTableTops" />
+                <img src={item.image1} alt="catalogTableTops" />
               </div>
-              <h4>{item.name}</h4>
+              <h4>
+                {item.name}
+                <br />
+                {item.model}
+              </h4>
               <p>{item.price} Сум</p>
             </div>
-            <a href="https://t.me/+998901114700" target="_blank">
+            <a href="https://t.me/+998901114700" target="_blank" rel="noopener noreferrer">
               Связаться
             </a>
           </div>

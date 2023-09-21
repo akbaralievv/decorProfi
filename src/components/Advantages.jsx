@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
-import advantages from '../assets/images/advantages.png';
 import { ScrollToContext } from '../App';
+import advantages from '../assets/images/advantages.png';
 
 function Advantages() {
   const { advantagesRef } = useContext(ScrollToContext);
