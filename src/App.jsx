@@ -11,7 +11,7 @@ import About from './components/About';
 
 import './css/app.css';
 
-const api_url = import.meta.env.VITE_DECOR_PROFI_API_URL;
+const api_url = import.meta.env.VITE_REACT_APP_DECOR_PROFI_API_URL;
 
 export const ModalContext = createContext({});
 export const ScrollToContext = createContext({});
