@@ -9,7 +9,7 @@ function Advantages() {
     <section className="advantages" ref={advantagesRef}>
       <div className="container">
         <div className="inner">
-          <h2s>Наши преимущества</h2s>
+          <h2>Наши преимущества</h2>
           <div className="cards">
             <div className="title">
               <div className="card">

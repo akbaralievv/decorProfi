@@ -11,6 +11,8 @@ import About from './components/About';
 
 import './css/app.css';
 
+const api_url = import.meta.env.VITE_DECOR_PROFI_API_URL;
+
 export const ModalContext = createContext({});
 export const ScrollToContext = createContext({});
 
@@ -31,7 +33,7 @@ function App() {
 
   const fetchProducts = useCallback(async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/v1/products/');
+      const response = await fetch(api_url);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
