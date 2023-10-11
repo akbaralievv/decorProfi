@@ -31,6 +31,8 @@ function App() {
   const aboutRef = useRef(null);
   const tableTopsRef = useRef(null);
 
+  console.log(api_url);
+
   const fetchProducts = useCallback(async () => {
     try {
       const response = await fetch(api_url);
