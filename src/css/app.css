@@ -446,6 +446,17 @@ h2 {
     display: block;
   }
 }
+.header .inner .social.social_burger-menu {
+  display: none;
+}
+@media (max-width: 470px) {
+  .header .inner .social.social_burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 13px;
+  }
+}
 .header .inner .menu-options {
   position: absolute;
   z-index: 2;
@@ -2316,6 +2327,17 @@ h2 {
 .footer .inner .maps img {
   width: 100%;
   border-radius: 15px;
+}
+.footer .inner .leaflet-container {
+  width: 40%;
+}
+@media (max-width: 450px) {
+  .footer .inner .leaflet-container {
+    width: 100%;
+  }
+}
+.footer .inner .leaflet-bottom {
+  display: none;
 }
 
 .ant-modal {

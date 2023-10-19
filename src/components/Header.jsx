@@ -111,6 +111,14 @@ function Header() {
           <div className="burger-menu" onClick={() => setMenuActive(!menuActive)}>
             <img src={burger} alt="burger" />
           </div>
+          <div className="social social_burger-menu">
+            <a href="https://t.me/decorprofiuz" target="_blank">
+              <img src={telegram} alt="telegram" />
+            </a>
+            <a href="https://instagram.com/decorprofi.kg?igshid=MzRlODBiNWFlZA==" target="_blank">
+              <img src={instagram} alt="instagram" />
+            </a>
+          </div>
           {menuActive && (
             <div className="menu-options">
               <nav className="nav navOptions">
