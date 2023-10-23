@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import 'leaflet/dist/images/marker-icon-2x.png';
 
 const Maps = () => {
   const address = [41.356027457645574, 69.24709812057183];
