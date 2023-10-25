@@ -37,10 +37,10 @@ const App = () => {
             <h3>{dataInfo.name}</h3>
             <h4>{dataInfo.articul}</h4>
             <h5>{dataInfo.model}</h5>
-            <dl>
-              {dataInfo.color && <dt>Цвет изделия - {dataInfo.color}</dt>}
-              <dd className="information">{dataInfo.information}</dd>
-            </dl>
+            <div>
+              {dataInfo.color && <p className="information">Цвет изделия - {dataInfo.color}</p>}
+              <div className="information">{dataInfo.information}</div>
+            </div>
             {dataInfo.description && (
               <div className="description">
                 <h6>Описание</h6>

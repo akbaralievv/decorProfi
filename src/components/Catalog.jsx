@@ -16,6 +16,7 @@ function Catalog() {
         behavior: 'smooth',
         block: 'start',
       });
+      setTextCatalog('');
     }
   }, [textCatalog, tableTopsRef]);
 

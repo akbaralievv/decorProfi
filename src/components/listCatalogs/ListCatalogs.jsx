@@ -4,7 +4,7 @@ import { ScrollToContext } from '../../App';
 
 function ListCatalogs({ types }) {
   const { tableTopsRef, textCatalog } = useContext(ScrollToContext);
-
+  console.log(types);
   return (
     <section className="list-catalogs">
       <div className="container">
@@ -16,7 +16,8 @@ function ListCatalogs({ types }) {
             const isMatchingCatalog =
               textCatalog &&
               (catalog.name.toLowerCase() === textCatalog.toLowerCase() ||
-                catalog.catalog_name.toLowerCase() === textCatalog.toLowerCase());
+                catalog.catalog_name.toLowerCase() === textCatalog.toLowerCase() ||
+                types.name.toLowerCase() === textCatalog.toLowerCase());
 
             return (
               <div key={id} className="refDiv" ref={isMatchingCatalog ? tableTopsRef : null}>

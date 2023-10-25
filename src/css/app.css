@@ -1743,17 +1743,17 @@ h2 {
     width: 900px;
   }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1090px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
     width: 800px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
     width: 700px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
     width: 600px;
   }
@@ -1788,9 +1788,9 @@ h2 {
     width: 320px;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 390px) {
   .list-catalogs .inner .wrapper-slider .slick-list {
-    width: 307px;
+    width: 290px;
   }
 }
 .list-catalogs .inner .wrapper-slider .slick-next {
@@ -1840,54 +1840,74 @@ h2 {
   margin-left: 0;
   gap: 62px;
 }
-@media (max-width: 950px) {
-  .list-catalogs .inner .wrapper-slider .slick-track {
-    gap: 40px;
-  }
-}
 @media (max-width: 768px) {
   .list-catalogs .inner .wrapper-slider .slick-track {
     gap: 16px;
   }
 }
-@media (max-width: 470px) {
-  .list-catalogs .inner .wrapper-slider .slick-track {
-    gap: 14px;
-  }
-}
 .list-catalogs .inner .wrapper-slider .card {
-  width: 319px;
+  width: 292px !important;
   border-radius: 30px;
 }
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
   .list-catalogs .inner .wrapper-slider .card {
-    width: 250px;
+    width: 233px !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1090px) {
   .list-catalogs .inner .wrapper-slider .card {
-    width: 184px;
+    width: 200px !important;
+  }
+}
+@media (max-width: 990px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 167px !important;
+  }
+}
+@media (max-width: 880px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 133px !important;
+  }
+}
+@media (max-width: 770px) {
+  .list-catalogs .inner .wrapper-slider .card {
     border-radius: 17.41px;
+  }
+}
+@media (max-width: 645px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 140px !important;
+  }
+}
+@media (max-width: 565px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 120px !important;
   }
 }
 @media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .card {
-    width: 140px;
-  }
-}
-@media (max-width: 400px) {
-  .list-catalogs .inner .wrapper-slider .card {
-    width: 120px;
+    width: 110px !important;
   }
 }
 @media (max-width: 470px) {
   .list-catalogs .inner .wrapper-slider .card {
-    width: 93px;
+    width: 93px !important;
+  }
+}
+@media (max-width: 400px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 90px !important;
+  }
+}
+@media (max-width: 390px) {
+  .list-catalogs .inner .wrapper-slider .card {
+    width: 80px !important;
   }
 }
 .list-catalogs .inner .wrapper-slider .card .content {
   margin-bottom: 36px;
   cursor: pointer;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .list-catalogs .inner .wrapper-slider .card .content {
@@ -1947,28 +1967,31 @@ h2 {
   margin-top: 12px;
   margin-bottom: 14px;
   line-height: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1200px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 40px;
   }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1090px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 23px;
+    font-size: 19px;
     line-height: 37px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 35px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 20px;
+    font-size: 13px;
     line-height: 30px;
   }
 }
@@ -1976,93 +1999,105 @@ h2 {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
     margin-top: 7px;
     margin-bottom: 6px;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 27.855px;
+  }
+}
+@media (max-width: 565px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 11px;
   }
 }
 @media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 14px;
-  }
-}
-@media (max-width: 400px) {
-  .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 13px;
+    font-size: 10px;
   }
 }
 @media (max-width: 470px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
     margin-top: 4px;
     margin-bottom: 7px;
-    font-size: 12px;
+    font-size: 9px;
     line-height: 14.082px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .list-catalogs .inner .wrapper-slider .card .content h4 {
-    font-size: 10px;
-    line-height: 12.082px;
+    font-size: 8.5px;
+  }
+}
+@media (max-width: 390px) {
+  .list-catalogs .inner .wrapper-slider .card .content h4 {
+    font-size: 7.5px;
   }
 }
 .list-catalogs .inner .wrapper-slider .card .content p {
-  color: #000;
+  color: #323232;
   font-family: "Gotham Pro", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1200px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 40px;
   }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1090px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 23px;
+    font-size: 19px;
     line-height: 37px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 35px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 20px;
+    font-size: 13px;
     line-height: 30px;
   }
 }
 @media (max-width: 768px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 27.855px;
+  }
+}
+@media (max-width: 565px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 11px;
+    line-height: 20px;
   }
 }
 @media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-@media (max-width: 400px) {
-  .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 13px;
+    font-size: 10px;
     line-height: 18px;
   }
 }
 @media (max-width: 470px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 12px;
+    font-size: 9px;
     line-height: 14.082px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .list-catalogs .inner .wrapper-slider .card .content p {
-    font-size: 10px;
+    font-size: 8.5px;
+  }
+}
+@media (max-width: 390px) {
+  .list-catalogs .inner .wrapper-slider .card .content p {
+    font-size: 7.5px;
   }
 }
 .list-catalogs .inner .wrapper-slider .card a {
@@ -2096,89 +2131,82 @@ h2 {
 @media (max-width: 1200px) {
   .list-catalogs .inner .wrapper-slider .card a {
     width: 190px;
-    height: 55px;
-    font-size: 22px;
+    height: 52px;
+    font-size: 21px;
   }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1090px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 161px;
+    width: 160px;
     height: 45px;
+    font-size: 18px;
     padding: 6px 22px;
-    font-size: 17px;
     line-height: 30.852px;
     border-radius: 25px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 145px;
+    width: 140px;
     height: 40px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 142px;
-    font-size: 15px;
-    line-height: 20px;
+    width: 113px;
+    height: 33px;
+    font-size: 14px;
   }
 }
 @media (max-width: 768px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 133.473px;
-    height: 32.498px;
+    width: 110.473px;
+    height: 29.498px;
     padding: 4px 16px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14.852px;
     border-radius: 19.15px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 565px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 124px;
-    height: 34px;
-    font-size: 13px;
-  }
-}
-@media (max-width: 555px) {
-  .list-catalogs .inner .wrapper-slider .card a {
-    width: 115px;
-    height: 33px;
-    font-size: 12px;
+    width: 95px;
+    height: 27px;
+    font-size: 11px;
   }
 }
 @media (max-width: 510px) {
   .list-catalogs .inner .wrapper-slider .card a {
-    width: 100px;
-    height: 25px;
+    width: 86px;
+    height: 24px;
     font-size: 10px;
     line-height: 10px;
-  }
-}
-@media (max-width: 450px) {
-  .list-catalogs .inner .wrapper-slider .card a {
-    width: 85px;
-    height: 24px;
-    font-size: 9px;
-  }
-}
-@media (max-width: 400px) {
-  .list-catalogs .inner .wrapper-slider .card a {
-    width: 72px;
-    height: 21px;
-    font-size: 8.5px;
-    line-height: 8.5px;
   }
 }
 @media (max-width: 470px) {
   .list-catalogs .inner .wrapper-slider .card a {
     border-radius: 9.681px;
-    width: 67.474px;
-    height: 16.429px;
+    width: 75.474px;
+    height: 18.429px;
     padding: 2.022px 8.088px;
-    font-size: 7.041px;
+    font-size: 8.041px;
     line-height: 7.508px;
+  }
+}
+@media (max-width: 400px) {
+  .list-catalogs .inner .wrapper-slider .card a {
+    width: 72px;
+    height: 17px;
+    font-size: 7.5px;
+    line-height: 8.5px;
+  }
+}
+@media (max-width: 390px) {
+  .list-catalogs .inner .wrapper-slider .card a {
+    width: 65px;
+    height: 16px;
+    font-size: 7px;
   }
 }
 
@@ -2207,7 +2235,7 @@ h2 {
     padding-top: 20px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 590px) {
   .footer {
     padding-bottom: 42px;
     padding-top: 36px;
@@ -2236,7 +2264,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 450px) {
+@media (max-width: 590px) {
   .footer .inner .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2266,7 +2294,12 @@ h2 {
   font-weight: 400;
   line-height: 48px;
 }
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
+  .footer .inner .links p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
   .footer .inner .links p {
     font-size: 18px;
     line-height: 35px;
@@ -2274,11 +2307,11 @@ h2 {
 }
 @media (max-width: 768px) {
   .footer .inner .links p {
-    font-size: 12px;
-    line-height: 25.267px;
+    font-size: 14px;
+    line-height: 30.267px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 590px) {
   .footer .inner .links p {
     font-size: 14px;
   }
@@ -2291,24 +2324,29 @@ h2 {
   font-weight: 600;
   line-height: 48px;
 }
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
+  .footer .inner .links h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1000px) {
   .footer .inner .links h3 {
     font-size: 16px;
   }
 }
 @media (max-width: 768px) {
   .footer .inner .links h3 {
-    font-size: 12px;
-    line-height: 25.267px;
+    font-size: 14px;
+    line-height: 30.267px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 590px) {
   .footer .inner .links h3 {
     font-size: 20px;
     line-height: 48px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 590px) {
   .footer .inner .links h3:last-child {
     font-size: 15px;
   }
@@ -2316,24 +2354,25 @@ h2 {
 .footer .inner .links .time {
   font-weight: 500;
 }
-.footer .inner .maps {
+.footer .inner #map {
   width: 40%;
-}
-@media (max-width: 450px) {
-  .footer .inner .maps {
-    width: 100%;
-  }
-}
-.footer .inner .maps img {
-  width: 100%;
+  height: auto;
   border-radius: 15px;
 }
-.footer .inner .leaflet-container {
-  width: 40%;
+@media (max-width: 1050px) {
+  .footer .inner #map {
+    width: 48%;
+  }
 }
-@media (max-width: 450px) {
-  .footer .inner .leaflet-container {
+@media (max-width: 1000px) {
+  .footer .inner #map {
+    width: 50%;
+  }
+}
+@media (max-width: 590px) {
+  .footer .inner #map {
     width: 100%;
+    height: 300px;
   }
 }
 .footer .inner .leaflet-bottom {
@@ -2379,9 +2418,25 @@ h2 {
   width: 1165px;
   height: auto;
 }
-@media (max-width: 996px) {
+@media (max-width: 1164px) {
+  .ant-modal .ant-modal-content {
+    width: 1100px;
+  }
+}
+@media (max-width: 1099px) {
+  .ant-modal .ant-modal-content {
+    width: 1000px;
+  }
+}
+@media (max-width: 999px) {
   .ant-modal .ant-modal-content {
     padding: 27px 40px;
+    width: 960px;
+  }
+}
+@media (max-width: 960px) {
+  .ant-modal .ant-modal-content {
+    width: 900px;
   }
 }
 @media (max-width: 910px) {
@@ -2672,9 +2727,30 @@ h2 {
   height: auto;
   max-height: 175px;
   overflow-y: auto;
+  font-size: 22px;
 }
 .ant-modal .ant-modal-content .title .information::-webkit-scrollbar {
   width: 0;
+}
+@media (max-width: 1150px) {
+  .ant-modal .ant-modal-content .title .information {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .ant-modal .ant-modal-content .title .information {
+    font-size: 18px;
+  }
+}
+@media (max-width: 910px) {
+  .ant-modal .ant-modal-content .title .information {
+    font-size: 16px;
+  }
+}
+@media (max-width: 660px) {
+  .ant-modal .ant-modal-content .title .information {
+    font-size: 14px;
+  }
 }
 .ant-modal .ant-modal-content .title .description {
   margin-bottom: 32px;
@@ -2707,25 +2783,25 @@ h2 {
 }
 @media (max-width: 1150px) {
   .ant-modal .ant-modal-content .title .description h6 {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 30px;
   }
 }
 @media (max-width: 900px) {
   .ant-modal .ant-modal-content .title .description h6 {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 27px;
   }
 }
 @media (max-width: 910px) {
   .ant-modal .ant-modal-content .title .description h6 {
-    font-size: 10.467px;
+    font-size: 16px;
     line-height: 20.933px;
   }
 }
 @media (max-width: 660px) {
   .ant-modal .ant-modal-content .title .description h6 {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20.933px;
   }
 }
@@ -2740,14 +2816,14 @@ h2 {
 }
 @media (max-width: 1150px) {
   .ant-modal .ant-modal-content .title .description p {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 20px;
   }
 }
 @media (max-width: 910px) {
   .ant-modal .ant-modal-content .title .description p {
     width: 197.879px;
-    font-size: 8.373px;
+    font-size: 14px;
     line-height: 11.513px;
   }
 }

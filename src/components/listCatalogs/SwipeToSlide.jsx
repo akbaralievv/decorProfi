@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -41,6 +41,25 @@ function CustomNextArrow(props) {
 
 function SwipeToSlide({ catalogs }) {
   const { setIsModalOpen, setProductInfo } = useContext(ModalContext);
+  const [fontSize, setFontSize] = useState(16); // Начальный размер шрифта
+
+  useEffect(() => {
+    const cardTitle = document.querySelector('.card-title');
+    const cardPrice = document.querySelector('.card-price');
+
+    if (cardTitle && cardPrice) {
+      // Вычисляем максимальные высоты элементов
+      const maxTitleHeight = cardTitle.scrollHeight;
+      const maxPriceHeight = cardPrice.scrollHeight;
+
+      // Проверяем, влазит ли текст внутрь карточки без переполнения
+      if (maxTitleHeight > cardTitle.clientHeight || maxPriceHeight > cardPrice.clientHeight) {
+        // Уменьшаем размер шрифта
+        setFontSize((prevSize) => prevSize - 1);
+      }
+    }
+  }, [catalogs]);
+
   const isFiniteSlider = catalogs.length >= 3;
   const settings = {
     className: 'center',
@@ -49,9 +68,7 @@ function SwipeToSlide({ catalogs }) {
     slidesToShow: 3,
     swipeToSlide: true,
     nextArrow: <CustomNextArrow />,
-    afterChange: (index) => {
-      // console.log(`Slider Changed to: ${index + 1}, background: #222; color: #bada55`);
-    },
+    afterChange: (index) => {},
   };
 
   const handleClick = (product) => {
@@ -68,11 +85,8 @@ function SwipeToSlide({ catalogs }) {
               <div className="img">
                 <img src={item.image1} alt="catalogTableTops" />
               </div>
-              <h4>
-                {item.name}
-                <br />
-                {item.model}
-              </h4>
+              <h4>{item.name}</h4>
+              <h4>{item.model}</h4>
               <p>{item.price} Сум</p>
             </div>
             <a href="https://t.me/+998901114700" target="_blank" rel="noopener noreferrer">

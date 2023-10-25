@@ -26,7 +26,7 @@ function Advantages() {
                 </div>
                 <div className="card-small">
                   <h3>16 лет</h3>
-                  <p>Работаем в этой сфере поставляем мебель</p>
+                  <p>Работаем в этой сфере и поставляем мебель</p>
                 </div>
               </div>
             </div>

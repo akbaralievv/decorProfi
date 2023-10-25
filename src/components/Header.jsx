@@ -25,6 +25,7 @@ function Header() {
           behavior: 'smooth',
           block: 'start',
         });
+        setTextCatalog('');
       }, 0);
     }
   };
