@@ -484,7 +484,7 @@ h2 {
   line-height: 18.84px;
 }
 .header .inner .menu-options .nav ul .active {
-  border-bottom: 1px solid #E72E2E;
+  border-bottom: 1px solid #fff;
   padding-bottom: 3px;
 }
 @media (max-width: 470px) {
@@ -523,6 +523,9 @@ h2 {
 }
 .header .menuActive a {
   color: #000 !important;
+}
+.header .menuActive .active {
+  border-bottom: 1px solid #000 !important;
 }
 
 .home {
