@@ -363,7 +363,7 @@ h2 {
   color: white;
 }
 .header .inner .nav ul li .active {
-  border-bottom: 2px solid #E72E2E;
+  border-bottom: 2px solid #fff;
   padding-bottom: 10px;
   color: white;
 }
