@@ -43,18 +43,13 @@ function Footer() {
                   <ul>
                     <li>
                       <a href="mailto:decor_profi@mail.rudecor_profi@mail.ru" target="_blank">
-                        <h3>decor_profi@mail.rudecor_profi@mail.ru</h3>
+                        <h3>decorprofitoshkent@gmail.com</h3>
                       </a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            {/* <div className="maps">
-              <a href="https://2gis.ru/tashkent/geo/70000001061157502" target="_blank">
-                <img src={maps} alt="maps" />
-              </a>
-            </div> */}
             <Maps />
           </div>
         </div>
