@@ -4,7 +4,7 @@ import { ScrollToContext } from '../../App';
 
 function ListCatalogs({ types }) {
   const { tableTopsRef, textCatalog } = useContext(ScrollToContext);
-  console.log(types);
+
   return (
     <section className="list-catalogs">
       <div className="container">

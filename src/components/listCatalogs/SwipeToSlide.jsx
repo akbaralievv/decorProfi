@@ -41,20 +41,17 @@ function CustomNextArrow(props) {
 
 function SwipeToSlide({ catalogs }) {
   const { setIsModalOpen, setProductInfo } = useContext(ModalContext);
-  const [fontSize, setFontSize] = useState(16); // Начальный размер шрифта
+  const [fontSize, setFontSize] = useState(16);
 
   useEffect(() => {
     const cardTitle = document.querySelector('.card-title');
     const cardPrice = document.querySelector('.card-price');
 
     if (cardTitle && cardPrice) {
-      // Вычисляем максимальные высоты элементов
       const maxTitleHeight = cardTitle.scrollHeight;
       const maxPriceHeight = cardPrice.scrollHeight;
 
-      // Проверяем, влазит ли текст внутрь карточки без переполнения
       if (maxTitleHeight > cardTitle.clientHeight || maxPriceHeight > cardPrice.clientHeight) {
-        // Уменьшаем размер шрифта
         setFontSize((prevSize) => prevSize - 1);
       }
     }

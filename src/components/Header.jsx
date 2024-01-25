@@ -3,9 +3,13 @@ import React, { useContext, useState } from 'react';
 import { ScrollToContext } from '../App';
 
 import search from '../assets/icons/search.svg';
+import searchBlack from '../assets/icons/search black.svg';
+import burgerBlack from '../assets/icons/burger-menu black.svg';
 import close from '../assets/icons/closeIcon.png';
 import telegram from '../assets/icons/telegram.svg';
 import instagram from '../assets/icons/instagram.svg';
+import telegramBlack from '../assets/icons/telegram black.png';
+import instagramBlack from '../assets/icons/instagram black.png';
 import burger from '../assets/icons/burger-menu.svg';
 
 function Header() {
@@ -56,7 +60,7 @@ function Header() {
             className="search"
             style={{ display: searchActive ? 'block' : 'none' }}
             onSubmit={handleSubmit}>
-            <img src={search} alt="search" onClick={handleSubmit} />
+            <img src={menuActive ? searchBlack : search} alt="search" onClick={handleSubmit} />
             <input type="text" placeholder="Поиск" onChange={handleChange} value={searchValue} />
           </form>
           <nav className="nav" style={{ display: !searchActive ? 'block' : 'none' }}>
@@ -110,14 +114,14 @@ function Header() {
             </a>
           </div>
           <div className="burger-menu" onClick={() => setMenuActive(!menuActive)}>
-            <img src={burger} alt="burger" />
+            <img src={menuActive ? burgerBlack : burger} alt="burger" />
           </div>
           <div className="social social_burger-menu">
             <a href="https://t.me/decorprofiuz" target="_blank">
-              <img src={telegram} alt="telegram" />
+              <img src={menuActive ? telegramBlack : telegram} alt="telegram" />
             </a>
             <a href="https://instagram.com/decorprofi.kg?igshid=MzRlODBiNWFlZA==" target="_blank">
-              <img src={instagram} alt="instagram" />
+              <img src={menuActive ? instagramBlack : instagram} alt="instagram" />
             </a>
           </div>
           {menuActive && (

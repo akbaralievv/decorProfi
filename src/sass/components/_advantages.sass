@@ -20,23 +20,14 @@
         .cards
             display: flex
             justify-content: space-between
-            height: 666px
             width: 100%
-            @media (max-width: 1130px)
-                height: 500px
-            @media (max-width: 920px)
-                height: 420px
-            @media (max-width: 870px)
-                height: 400px
-            @media (max-width: 790px)
-                justify-content: space-around
-                height: 363px
-            @media (max-width:575px) and (min-width: 521px)
-                height: 323px
+            @media (max-width: 520px)
+                justify-content: center
             .title
                 display: flex
                 flex-direction: column
                 justify-content: space-between
+                gap: 28px
                 width: 701px
                 @media (max-width: 1200px)
                     width: 500px
@@ -136,41 +127,41 @@
                     justify-content: space-between
                     .card-small
                         width: 336px
-                        height: 309px
+                        height: 380px
                         border-radius: 30px
                         padding: 48px 24px
                         background: linear-gradient(180deg, #FBFBFB -698.33%, #DDD -588.76%, #1E1E1E 100%)
                         @media (max-width: 1200px)
                             width: 230px
-                            height: 260px
+                            height: 340px
                             padding: 35px 19px
                         @media (max-width: 1130px)
-                            height: 220px
+                            height: 320px
                         @media (max-width: 1000px)
                             width: 195px
                             border-radius: 25px
-                            height: 200px
+                            height: 300px
                         @media (max-width: 920px)
                             padding: 30px 19px
                             border-radius: 20px
                         @media (max-width: 870px)
                             width: 180px
-                            height: 180px
+                            height: 280px
                         @media (max-width: 790px)
                             width: 170.835px
-                            height: 160.982px
+                            height: 260.982px
                             padding: 26px 14px 60px
                         @media (max-width: 660px)
-                            height: 155px
+                            height: 222px
                         @media (max-width: 660px)
                             width: 150px
 
                         @media (max-width:575px) and (min-width: 521px)
                             width: 125px
-                            height: 135px
+                            height: 215px
                             border-radius: 17px
                         @media (max-width: 470px)
-                            height: 145px
+                            height: 215px
                             width: 150px
                             padding: 20px 12px
                             border-radius: 14.057px
@@ -214,11 +205,11 @@
                             @media (max-width: 1200px)
                                 width: 190px
                                 font-size: 17px
-                                line-height: 38px
+                                line-height: 27px
                             @media (max-width: 1000px)
                                 width: 163px
                                 font-size: 15px
-                                line-height: 30px
+                                line-height: 26px
                             @media (max-width: 920px)
                                 width: 160px
                                 font-size: 17px
@@ -230,7 +221,7 @@
                             @media (max-width: 790px)
                                 width: 129px
                                 font-size: 13px
-                                line-height: 20.079px
+                                line-height: 17.079px
                                 letter-spacing: 0.12px
                             @media (max-width: 660px)
                                 width: 120px
@@ -244,10 +235,10 @@
                                 line-height: 17.354px
                                 letter-spacing: 0.24px
                     .card-small:last-child
-                        background: #E7772E
+                        background: #E72E2E
             .images
                 width: 475px
-                height: 100%
+                min-height: 100%
                 @media (max-width: 1130px)
                     width: 350px
                 @media (max-width: 920px)
@@ -265,3 +256,4 @@
                 img
                     width: 100%
                     height: 100%
+                    border-radius: 40px
