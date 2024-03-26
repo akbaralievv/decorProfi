@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import { ScrollToContext } from '../App';
 
@@ -11,6 +11,8 @@ import instagram from '../assets/icons/instagram.svg';
 import telegramBlack from '../assets/icons/telegram black.png';
 import instagramBlack from '../assets/icons/instagram black.png';
 import burger from '../assets/icons/burger-menu.svg';
+import logo from '../assets/images/logo 2.png';
+import logoBlack from '../assets/images/logo.png';
 
 function Header() {
   const { catalogRef, advantagesRef, contactsRef, setTextCatalog, aboutRef } =
@@ -21,7 +23,10 @@ function Header() {
   const [searchActive, setSearchActive] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  const scrollToSection = (sectionRef, sectionName) => {
+  const headerRef = useRef(null);
+
+  const scrollToSection = (sectionRef, sectionName, e) => {
+    e.preventDefault();
     setActiveSection(sectionName);
     if (sectionRef.current) {
       setTimeout(() => {
@@ -46,15 +51,45 @@ function Header() {
     setSearchValue(e.target.value);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (
+        (window.innerWidth > 1200 || (window.innerWidth < 1200 && window.innerWidth > 600)) &&
+        searchActive
+      ) {
+        setSearchActive(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [searchActive]);
+
+  let lastScrollTop = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentScroll = window.scrollY;
+      if (currentScroll > lastScrollTop && headerRef.current) {
+        headerRef.current.classList.remove('visible');
+      } else if (headerRef.current) {
+        headerRef.current.classList.add('visible');
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={`header`}>
+    <header className="header visible" ref={headerRef}>
       <div className="container">
         <div className={`inner ${menuActive ? 'menuActive' : ''}`}>
           <div className="logo">
-            <h2>
-              Decor <br className="br" />
-              Profi
-            </h2>
+            <img src={menuActive ? logoBlack : logo} alt="logo" />
           </div>
           <form
             className="search"
@@ -67,32 +102,32 @@ function Header() {
             <ul>
               <li>
                 <a
-                  href="#"
-                  onClick={() => scrollToSection(aboutRef, 'about')}
+                  href=""
+                  onClick={(e) => scrollToSection(aboutRef, 'about', e)}
                   className={activeSection === 'about' ? 'active' : ''}>
                   О нас
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  onClick={() => scrollToSection(catalogRef, 'catalogs')}
+                  href=""
+                  onClick={(e) => scrollToSection(catalogRef, 'catalogs', e)}
                   className={activeSection === 'catalogs' ? 'active' : ''}>
                   Каталог
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  onClick={() => scrollToSection(advantagesRef, 'advantages')}
+                  href=""
+                  onClick={(e) => scrollToSection(advantagesRef, 'advantages', e)}
                   className={activeSection === 'advantages' ? 'active' : ''}>
                   Преимущества
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  onClick={() => scrollToSection(contactsRef, 'contacts')}
+                  href=""
+                  onClick={(e) => scrollToSection(contactsRef, 'contacts', e)}
                   className={activeSection === 'contacts' ? 'active' : ''}>
                   Контакты
                 </a>

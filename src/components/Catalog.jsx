@@ -31,7 +31,9 @@ function Catalog() {
                 <div
                   key={id}
                   className="card"
-                  style={{ backgroundImage: `url(${catalog.catalog_image})` }}
+                  style={{
+                    background: `linear-gradient(to bottom, rgba(0,0,0,0) 60%,rgba(0,0,0,0.4) 100%), url(${catalog.catalog_image})`,
+                  }}
                   onClick={() => scrollToTableTops(catalog.catalog_name)}>
                   <div className="card-inner">
                     <h3>{catalog.catalog_name}</h3>
