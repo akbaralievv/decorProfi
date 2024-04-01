@@ -32,7 +32,7 @@ function Catalog() {
                   key={id}
                   className="card"
                   style={{
-                    background: `linear-gradient(to bottom, rgba(0,0,0,0) 60%,rgba(0,0,0,0.4) 100%), url(${catalog.catalog_image})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 60%,rgba(0,0,0,0.4) 100%), url(${catalog.catalog_image})`,
                   }}
                   onClick={() => scrollToTableTops(catalog.catalog_name)}>
                   <div className="card-inner">
