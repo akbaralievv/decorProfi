@@ -170,7 +170,7 @@ function Header() {
                   <li>
                     <a
                       href="#"
-                      onClick={() => scrollToSection(aboutRef, 'about')}
+                      onClick={(e) => scrollToSection(aboutRef, 'about', e)}
                       className={activeSection === 'about' ? 'active' : ''}>
                       О нас
                     </a>
@@ -178,7 +178,7 @@ function Header() {
                   <li>
                     <a
                       href="#"
-                      onClick={() => scrollToSection(catalogRef, 'catalogs')}
+                      onClick={(e) => scrollToSection(catalogRef, 'catalogs', e)}
                       className={activeSection === 'catalogs' ? 'active' : ''}>
                       Каталог
                     </a>
@@ -186,7 +186,7 @@ function Header() {
                   <li>
                     <a
                       href="#"
-                      onClick={() => scrollToSection(advantagesRef, 'advantages')}
+                      onClick={(e) => scrollToSection(advantagesRef, 'advantages', e)}
                       className={activeSection === 'advantages' ? 'active' : ''}>
                       Преимущества
                     </a>
@@ -194,7 +194,7 @@ function Header() {
                   <li>
                     <a
                       href="#"
-                      onClick={() => scrollToSection(contactsRef, 'contacts')}
+                      onClick={(e) => scrollToSection(contactsRef, 'contacts', e)}
                       className={activeSection === 'contacts' ? 'active' : ''}>
                       Контакты
                     </a>
