@@ -144,7 +144,9 @@ function Header() {
             <a href="https://t.me/decorprofiuz" target="_blank">
               <img src={telegram} alt="telegram" />
             </a>
-            <a href="https://instagram.com/decorprofi.kg?igshid=MzRlODBiNWFlZA==" target="_blank">
+            <a
+              href="https://www.instagram.com/decorprofi.uz?igsh=MWwzbnBwNW42d3B3cw=="
+              target="_blank">
               <img src={instagram} alt="instagram" />
             </a>
           </div>
@@ -155,7 +157,9 @@ function Header() {
             <a href="https://t.me/decorprofiuz" target="_blank">
               <img src={menuActive ? telegramBlack : telegram} alt="telegram" />
             </a>
-            <a href="https://instagram.com/decorprofi.kg?igshid=MzRlODBiNWFlZA==" target="_blank">
+            <a
+              href="https://www.instagram.com/decorprofi.uz?igsh=MWwzbnBwNW42d3B3cw=="
+              target="_blank">
               <img src={menuActive ? instagramBlack : instagram} alt="instagram" />
             </a>
           </div>
