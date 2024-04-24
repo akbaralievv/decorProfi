@@ -29,6 +29,7 @@ function Header() {
   const scrollToSection = (sectionRef, sectionName, e) => {
     e.preventDefault();
     setActiveSection(sectionName);
+    setMenuActive(false);
     if (sectionRef.current) {
       setTimeout(() => {
         sectionRef.current.scrollIntoView({
