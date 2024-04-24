@@ -24,6 +24,7 @@ function Header() {
   const [activeSection, setActiveSection] = useState('');
 
   const headerRef = useRef(null);
+  const menuRef = useRef(null);
 
   const scrollToSection = (sectionRef, sectionName, e) => {
     e.preventDefault();
@@ -68,6 +69,12 @@ function Header() {
 
   let lastScrollTop = 0;
 
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuActive(false);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       let currentScroll = window.scrollY;
@@ -80,14 +87,18 @@ function Header() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('mousedown', handleClickOutside);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   return (
     <header className="header visible" ref={headerRef}>
       <div className="container">
-        <div className={`inner ${menuActive ? 'menuActive' : ''}`}>
+        <div className={`inner ${menuActive ? 'menuActive' : ''}`} ref={menuRef}>
           <div className="logo">
             <img src={menuActive ? logoBlack : logo} alt="logo" />
           </div>
